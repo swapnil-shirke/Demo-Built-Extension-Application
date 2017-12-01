@@ -14,6 +14,10 @@
   },
   "author": "clive-machado",
   "license": "ISC",
+  "dependencies": {
+    "lodash.template": "*",
+    "request": "*"
+  },
   "bugs": {
     "url": "https://github.com/clive-machado/Demo-Built-Extension-Application/issues"
   },
