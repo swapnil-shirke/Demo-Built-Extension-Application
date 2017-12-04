@@ -8,21 +8,21 @@ module.exports = {
 			})
 		}
 	},
-	// "/v1/classes/person/objects" : {
-	// 	POST: {
-	// 		_pre: function(req, res) {
-	// 			req.logger.log(res)
-	// 			req.bobjekt = req.bobjekt.set("age", 44)
-	// 			// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
-	// 			// 	"city": "Mumbai"
-	// 			// })
-	// 			return Promise.resolve()
-	// 		},
-	// 		_post: function(req, res) {
-	// 			req.logger.log(res)			
-	// 			req.bobjekt['new_field'] = "new_value"
-	// 			return Promise.resolve()
-	// 		}
-	// 	}
-	// }
+	"/v1/classes/person/objects" : {
+		POST: {
+			_pre: function(req, res) {
+				// req.logger.log(res)
+				// req.bobjekt = req.bobjekt.set("age", 44)
+				// // req.bobjekt = req.bobjekt.setReferenceWhere("address", {
+				// // 	"city": "Mumbai"
+				// // })
+				return Promise.resolve()
+			},
+			_post: function(req, res) {
+				// req.logger.log(res)			
+				// req.bobjekt['new_field'] = "new_value"
+				return Promise.resolve()
+			}
+		}
+	}
 }	
