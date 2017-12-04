@@ -16,8 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash.template": "*",
-    "request": "*",
-    "when": "^3.7.8"
+    "request": "*"
   },
   "bugs": {
     "url": "https://github.com/clive-machado/Demo-Built-Extension-Application/issues"
