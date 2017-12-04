@@ -1,4 +1,4 @@
-// var when = require("when");
+var when = require("when");
 
 module.exports = {
   "/v1/functions/clive": {
@@ -16,12 +16,12 @@ module.exports = {
 				// // req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 				// // 	"city": "Mumbai"
 				// // })
-				return Promise.resolve()
+				return when.resolve()
 			},
 			_post: function(req, res) {
 				req.logger.log(res)			
 				// req.bobjekt['new_field'] = "new_value"
-				return Promise.resolve()
+				return when.resolve()
 			}
 		}
 	}
