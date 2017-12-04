@@ -1,4 +1,4 @@
-// var when = require("when");
+var when = require("when");
 
 module.exports = {
   "/v1/functions/clive": {
