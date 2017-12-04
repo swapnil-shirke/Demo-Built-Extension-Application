@@ -11,7 +11,7 @@ var extensionSDK = app.Extension({
 	extension_key	 : 'blt_ext_default',
 	static         : __dirname + '/client',
 	routes         : require('./server/routes')
-})
+}) 
 
 return extensionSDK.start(9000)
 
