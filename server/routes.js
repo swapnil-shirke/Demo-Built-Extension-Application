@@ -13,6 +13,8 @@ module.exports = {
 			_pre: function(req, res) {
 				req.logger.log("pre")
 				req.bobjekt = req.bobjekt.set("age", 89)
+				req.bobjekt.set('address', "Mumbai")
+				
 				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 				// 	"city": "Mumbai"
 				// })
@@ -20,7 +22,6 @@ module.exports = {
 			},
 			_post: function(req, res) {			
 				req.logger.log("post")				
-// 				req.bobjekt.set('Address', "Mumbai")
 				return when.resolve()
 			}
 		}
