@@ -20,7 +20,7 @@ module.exports = {
 			},
 			_post: function(req, res) {			
 				req.logger.log("post")				
-				// // req.bobjekt['new_field'] = "new_value"
+				req.bobjekt['Address'] = "Mumbai"
 				return when.resolve()
 			}
 		}
