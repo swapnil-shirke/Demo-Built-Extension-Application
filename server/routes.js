@@ -13,18 +13,13 @@ module.exports = {
 			_post: function(req, res) {
 				req.logger.log(req.bobjekt)
 				req.logger.log("get called")
-				return when.resolve(	)				
+				return when.resolve()				
 			}
 		},
 		POST: {
 			_pre: function(req, res) {
 				req.logger.log("pre")
 				req.bobjekt = req.bobjekt.set("age", 93)
-				// req.bobjekt = req.bobjekt.set('address', "Mumbai")
-				
-				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
-				// 	"city": "Mumbai"
-				// })
 				return when.resolve()
 			},
 			_post: function(req, res) {			
