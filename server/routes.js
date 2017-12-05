@@ -25,5 +25,12 @@ module.exports = {
 				return when.resolve()
 			}
 		}
+	},
+	"v1/classes/person/objects/:objectUid" : {
+		GET: {
+			_pre: function(req, res) {
+				req.logger.log(req.bobjekt.name)
+			}
+		}
 	}
 }	
