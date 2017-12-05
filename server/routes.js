@@ -9,6 +9,12 @@ module.exports = {
 		}
 	},
 	"/v1/classes/person/objects" : {
+		GET: {
+			_post: function(req, res) {
+				req.logger.log(req.bobjekt)
+				req.logger.log("get called")				
+			}
+		},
 		POST: {
 			_pre: function(req, res) {
 				req.logger.log("pre")
@@ -23,14 +29,6 @@ module.exports = {
 			_post: function(req, res) {			
 				req.logger.log("post")				
 				return when.resolve()
-			}
-		}
-	},
-	"v1/classes/person/objects/:objectUid" : {
-		GET: {
-			_post: function(req, res) {
-				req.logger.log(req.bobjekt.name)
-				req.logger.log("get called")				
 			}
 		}
 	}
