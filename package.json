@@ -15,8 +15,7 @@
   "author": "clive-machado",
   "license": "ISC",
   "dependencies": {
-    "lodash.template": "*",
-    "request": "*",
+    "request": "^2.83.0",
     "when": "^3.7.8"
   },
   "bugs": {
