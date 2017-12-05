@@ -13,7 +13,7 @@ module.exports = {
 			_pre: function(req, res) {
 				req.logger.log("pre")
 				req.bobjekt = req.bobjekt.set("age", 40)
-				req.bobjekt.set('address', "Mumbai")
+				req.bobjekt = req.bobjekt.set('address', "Mumbai")
 				
 				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 				// 	"city": "Mumbai"
