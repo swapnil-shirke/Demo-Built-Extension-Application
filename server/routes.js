@@ -12,7 +12,8 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.log(req.bobjekt)
-				req.logger.log("get called")				
+				req.logger.log("get called")
+				return when.resolve()				
 			}
 		},
 		POST: {
