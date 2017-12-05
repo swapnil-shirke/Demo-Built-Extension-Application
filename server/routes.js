@@ -1,5 +1,4 @@
 var when = require("when");
-var request = require('request');
 
 module.exports = {
   "/v1/functions/clive": {
@@ -12,15 +11,14 @@ module.exports = {
 	"/v1/classes/person/objects" : {
 		POST: {
 			_pre: function(req, res) {
-				// req.logger.log(res)
 				req.bobjekt = req.bobjekt.set("age", 44)
-				// // // req.bobjekt = req.bobjekt.setReferenceWhere("address", {
-				// // // 	"city": "Mumbai"
-				// // // })
+				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
+				// 	"city": "Mumbai"
+				// })
+				console.log("hello ")
 				return when.resolve()
 			},
-			_post: function(req, res) {
-				// req.logger.log(res)			
+			_post: function(req, res) {			
 				// // req.bobjekt['new_field'] = "new_value"
 				return when.resolve()
 			}
