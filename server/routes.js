@@ -12,8 +12,8 @@ module.exports = {
 		POST: {
 			_pre: function(req, res) {
 				req.logger.log("pre")
-				req.bobjekt = req.bobjekt.set("age", 40)
-				req.bobjekt = req.bobjekt.set('address', "Mumbai")
+				req.bobjekt = req.bobjekt.set("age", 93)
+				// req.bobjekt = req.bobjekt.set('address', "Mumbai")
 				
 				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 				// 	"city": "Mumbai"
@@ -28,7 +28,7 @@ module.exports = {
 	},
 	"v1/classes/person/objects/:objectUid" : {
 		GET: {
-			_pre: function(req, res) {
+			_post: function(req, res) {
 				req.logger.log(req.bobjekt.name)
 			}
 		}
