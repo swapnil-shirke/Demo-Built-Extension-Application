@@ -11,14 +11,15 @@ module.exports = {
 	"/v1/classes/person/objects" : {
 		POST: {
 			_pre: function(req, res) {
+				req.logger.log("pre")
 				req.bobjekt = req.bobjekt.set("age", 44)
 				// req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 				// 	"city": "Mumbai"
 				// })
-				console.log("hello ")
 				return when.resolve()
 			},
 			_post: function(req, res) {			
+				req.logger.log("post")				
 				// // req.bobjekt['new_field'] = "new_value"
 				return when.resolve()
 			}
