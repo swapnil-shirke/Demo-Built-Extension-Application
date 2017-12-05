@@ -13,7 +13,7 @@ module.exports = {
 			_post: function(req, res) {
 				req.logger.log(req.bobjekt)
 				req.logger.log("get called")
-				return when.resolve()				
+				return when.resolve(	)				
 			}
 		},
 		POST: {
