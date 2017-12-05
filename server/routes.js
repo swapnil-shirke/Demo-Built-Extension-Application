@@ -30,6 +30,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.log(req.bobjekt.name)
+				req.logger.log("get called")				
 			}
 		}
 	}
