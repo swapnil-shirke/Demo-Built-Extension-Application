@@ -20,10 +20,11 @@ module.exports = {
 				req.bobjekt = req.bobjekt.set("age", 93)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
-				}).save()
-				.then(function(data){
-					req.logger.log(data.toJSON())
-				})				
+				})
+				// .save()
+				// .then(function(data){
+				// 	req.logger.log(data.toJSON())
+				// })				
 				return when.resolve()
 			},
 			_post: function(req, res) {			
