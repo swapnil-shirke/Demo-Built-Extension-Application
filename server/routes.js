@@ -10,22 +10,23 @@ module.exports = {
 	},
 	"/v1/classes/person/objects" : {
 		GET: {
-			_post: function(req, res) {
-				req.logger.log(req.bobjekt)
+			_post: function(req, res) {	
 				return when.resolve()				
 			}
 		},
 		POST: {
 			_pre: function(req, res) {
-				req.logger.log("pre", req.bobjekt)
 				req.bobjekt = req.bobjekt.set("age", 93)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
+				}).save()
+				.then(function(data){
+					req.logger.log(data.toJSON())
 				})				
 				return when.resolve()
 			},
 			_post: function(req, res) {			
-				req.logger.log("post")				
+				req.bobjekt['merge_this'] = "merge will not reflect on classes in backend"				
 				return when.resolve()
 			}
 		}
@@ -33,8 +34,6 @@ module.exports = {
 	"/v1/classes/person/objects/:object:Uid": {
 		GET: {
 			_post: function(req, res) {
-				req.logger.log(req.bobjekt)
-				req.logger.log("get called")
 				return when.resolve()				
 			}
 		}
