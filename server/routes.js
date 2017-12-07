@@ -10,7 +10,8 @@ module.exports = {
 	},
 	"/v1/classes/person/objects" : {
 		GET: {
-			_post: function(req, res) {	
+			_post: function(req, res) {
+				req.logger.error(req.bobjekt)				
 				return when.resolve()				
 			}
 		},
@@ -34,6 +35,7 @@ module.exports = {
 	"/v1/classes/person/objects/:object:Uid": {
 		GET: {
 			_post: function(req, res) {
+				req.logger.warn(req.bobjekt)
 				return when.resolve()				
 			}
 		}
