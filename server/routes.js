@@ -32,7 +32,7 @@ module.exports = {
 			}
 		}
 	},
-	"/v1/classes/person/objects/:object:Uid": {
+	"/v1/classes/person/objects/:objectUid": {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn(req.bobjekt)
