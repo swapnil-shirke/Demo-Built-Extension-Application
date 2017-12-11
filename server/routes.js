@@ -11,32 +11,31 @@ module.exports = {
 	"/v1/classes/person/objects" : {
 		GET: {
 			_post: function(req, res) {
-				req.logger.log("in post objects", req.bobjekt)				
+				req.logger.log("in post objects", req.bobjekt)
+				req.bobjekt.unknown()								
 				return when.resolve()				
 			}
 		},
 		POST: {
 			_pre: function(req, res) {
-				req.bobjekt = 
-				req.bobjekt.set("age", 1)
-				.then(function(res){
-					req.logger.log("set age res", req.bobjekt)				
-				})
-				.catch(function(err){
-					req.logger.error("set age err", req.bobjekt)									
-				})
-				
+				req.bobjekt = req.bobjekt.set("age", 1)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})	
 				// .save()
 				// .then(function(data){
 				// 	req.logger.log(data.toJSON())
-				// })				
+				// })	
+				
+				if(req.bobjekt.name != "Clive") {
+					req,logger.log("came to what the hell")
+					throw "What the hell"
+				}
 				return when.resolve()
 			},
-			_post: function(req, res) {			
-				req.bobjekt['merge_this'] = "merge will not reflect on classes in backend"				
+			_post: function(req, res) {
+				req.logger.log(res)								
+				req.bobjekt['v1'] = "merge will not reflect on classes in backend"				
 				return when.resolve()
 			}
 		}
