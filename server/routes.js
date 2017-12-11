@@ -34,8 +34,7 @@ module.exports = {
 				// }
 				return when.resolve()
 			},
-			_post: function(req, res) {
-				req.logger.log(res)								
+			_post: function(req, res) {								
 				req.bobjekt['v1'] = "merge will not reflect on classes in backend"				
 				return when.resolve()
 			}
