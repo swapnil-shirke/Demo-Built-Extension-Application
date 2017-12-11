@@ -13,7 +13,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.log("in post objects", req.bobjekt)
-				req.bobjekt.unknown()								
+				// req.bobjekt.unknown()								
 				return when.resolve()				
 			}
 		},
