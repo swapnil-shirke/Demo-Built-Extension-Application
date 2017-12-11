@@ -17,7 +17,7 @@ module.exports = {
 		},
 		POST: {
 			_pre: function(req, res) {
-				req.bobjekt = req.bobjekt.set("age", 93)
+				req.bobjekt = req.bobjekt.set("age", 1)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})
@@ -51,7 +51,7 @@ module.exports = {
 				return when.resolve()				
 			}
 		},
-		DELETE: {
+		DELETE: { 
 			_pre: function(req, res) {	
 				req.logger.log("Deleted:  ", req.bobjekt)				
 				return when.resolve()
@@ -63,6 +63,78 @@ module.exports = {
 					defered.resolve()
 				},1000)
 				return when.resolve()				
+			}
+		}
+	},
+	/**
+	 * v2
+	 */
+	"/v2/classes/person/objects": {
+		GET: {
+			_post: function(req, res) {
+				req.logger.error(req.bobjekt)				
+				return when.resolve()				
+			}
+		},
+		POST: {
+			_pre: function(req, res) {
+				req.bobjekt = req.bobjekt.set("age", 2)
+				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
+					"city": "Vasai"
+				})		
+				return when.resolve()
+			},
+			_post: function(req, res) {			
+				req.bobjekt['v2'] = "v2 merge will not reflect on classes in backend"				
+				return when.resolve()
+			}
+		}
+	},
+	/**
+	 * v3
+	 */
+	"/v3/classes/person/objects": {
+		GET: {
+			_post: function(req, res) {
+				req.logger.error(req.bobjekt)				
+				return when.resolve()				
+			}
+		},
+		POST: {
+			_pre: function(req, res) {
+				req.bobjekt = req.bobjekt.set("age", 3)
+				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
+					"city": "Virar"
+				})			
+				return when.resolve()
+			},
+			_post: function(req, res) {			
+				req.bobjekt['v3'] = "v3 merge will not reflect on classes in backend"				
+				return when.resolve()
+			}
+		}
+	},
+	/**
+	 * v4
+	 */
+	"/v4/classes/person/objects": {
+		GET: {
+			_post: function(req, res) {
+				req.logger.error(req.bobjekt)				
+				return when.resolve()				
+			}
+		},
+		POST: {
+			_pre: function(req, res) {
+				req.bobjekt = req.bobjekt.set("age", 4)
+				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
+					"city": "Borivali"
+				})			
+				return when.resolve()
+			},
+			_post: function(req, res) {			
+				req.bobjekt['v4'] = "v4 merge will not reflect on classes in backend"				
+				return when.resolve()
 			}
 		}
 	}
