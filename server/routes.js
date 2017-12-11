@@ -137,5 +137,22 @@ module.exports = {
 				return when.resolve()
 			}
 		}
+	},
+	/**
+	 * Uploads
+	 */
+	"/v1/uploads": {
+		GET : {
+			_post: function(req, res) {
+				req.logger.log("in get Uploads", req.bobjekt)				
+				return when.resolve()	
+			}
+		},
+		POST : {
+			_post: function (req, res) {
+				req.logger.log("in Post Uploads", req.bobjekt)								
+				return when.resolve()					
+			}
+		}
 	}
 }	
