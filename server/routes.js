@@ -28,10 +28,10 @@ module.exports = {
 				// 	req.logger.log(data.toJSON())
 				// })	
 				
-				if(req.bobjekt.name != "Clive") {
-					req,logger.log("came to what the hell")
-					// throw { error: "What the hell" } 	
-				}
+				// if(req.bobjekt.name != "Clive") {
+				// 	req,logger.log("came to what the hell")
+				// 	// throw { error: "What the hell" } 	
+				// }
 				return when.resolve()
 			},
 			_post: function(req, res) {
