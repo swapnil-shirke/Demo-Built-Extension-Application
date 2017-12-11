@@ -17,7 +17,15 @@ module.exports = {
 		},
 		POST: {
 			_pre: function(req, res) {
-				req.bobjekt = req.bobjekt.set("age", 1)
+				req.bobjekt = 
+				req.bobjekt.set("age", 1)
+				.then(function(res){
+					req.logger.log("set age res", req.bobjekt)				
+				})
+				.catch(function(err){
+					req.logger.error("set age err", req.bobjekt)									
+				})
+				
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})	
@@ -139,7 +147,7 @@ module.exports = {
 		}
 	},
 	/**
-	 * Uploads
+	 * Uploads (Didn't work)
 	 */
 	"/v1/uploads": {
 		GET : {
