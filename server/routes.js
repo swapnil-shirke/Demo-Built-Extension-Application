@@ -19,7 +19,7 @@ module.exports = {
 		},
 		POST: {
 			_pre: function(req, res) {
-				req.bobjekt = req.bobjekt.set("age", 1)
+				req.bobjekt = req.bobjekt.set("age", undefined)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})	
