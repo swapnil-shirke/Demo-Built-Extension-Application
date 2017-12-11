@@ -20,7 +20,7 @@ module.exports = {
 				req.bobjekt = req.bobjekt.set("age", 1)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
-				})
+				})	
 				// .save()
 				// .then(function(data){
 				// 	req.logger.log(data.toJSON())
@@ -144,7 +144,7 @@ module.exports = {
 	"/v1/uploads": {
 		GET : {
 			_post: function(req, res) {
-				req.logger.log("in get Uploads", req.bobjekt)				
+				req.logger.log(req.bobjekt)				
 				return when.resolve()	
 			}
 		},
