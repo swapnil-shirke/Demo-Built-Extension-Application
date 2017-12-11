@@ -29,7 +29,7 @@ module.exports = {
 				
 				if(req.bobjekt.name != "Clive") {
 					// req,logger.log("came to what the hell")
-					throw "What the hell"
+					throw { error: "What the hell" } 	
 				}
 				return when.resolve()
 			},
