@@ -23,12 +23,12 @@ module.exports = {
 					"city": "Mumbai"
 				})	
 				// .save()
-				// .then(function(data){
+				// .then(function(data) {
 				// 	req.logger.log(data.toJSON())
 				// })	
 				
 				if(req.bobjekt.name != "Clive") {
-					req,logger.log("came to what the hell")
+					// req,logger.log("came to what the hell")
 					throw "What the hell"
 				}
 				return when.resolve()
