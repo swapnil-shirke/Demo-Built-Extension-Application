@@ -22,14 +22,15 @@ module.exports = {
 				req.bobjekt = req.bobjekt.set("age", 11)
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
-				})	
+				})
+				req,logger.log("object hook POST call in s_pre call")
+					
 				// .save()
 				// .then(function(data) {
 				// 	req.logger.log(data.toJSON())
 				// })	
 				
 				// if(req.bobjekt.name != "Clive") {
-				// 	req,logger.log("came to what the hell")
 				// 	// throw { error: "What the hell" } 	
 				// }
 				return when.resolve()
