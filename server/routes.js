@@ -47,13 +47,18 @@ module.exports = {
 				req.logger.warn("in get _post uid object", req.bobjekt)
 				req.logger.log("in get _post uid current user", req.built.getContextVar("currentUser"))				
 				req.builtApp.Class('person').Object({
-					 'name'		:'abc',
+					 'name'		:req.bobjekt.name,
 					 'age'    : 33,
 					 'address': [ "blt4f0760710e0b10c5" ]
 				})
-				.save()
-				// .then(function(){
-				// })
+				.save().then(function(succ) {
+					req.logger.log("new object " + req.bobjekt.name + " posted", succ)
+				}).catch(function(err) {
+					req.logger.error("object abc error", err)					
+				})
+
+				req.logger.log("req.bclass", req.bclass.toJSON())
+				
 				return when.resolve()								
 			}
 		},
