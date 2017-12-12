@@ -43,14 +43,15 @@ module.exports = {
 	"/v1/classes/person/objects/:objectUid": {
 		GET: {
 			_post: function(req, res) {
-				req.logger.warn(req.bobjekt)
-				return when.resolve()				
+				req.logger.warn("in get _post uid object", req.bobjekt)
+				
+				return when.reject()				
 			}
 		},
 		PUT: {
 			_pre: function(req, res) {
 				req.bobjekt = req.bobjekt.set("name", "Rohini")
-				req.logger.log("pre updated:  ", req.bobjekt)								
+				req.logger.log("_pre updated:  ", req.bobjekt)								
 				return when.resolve()
 			},
 			_post: function(req, res) {
@@ -69,7 +70,7 @@ module.exports = {
 					req.logger.warn("Timeout completed")
 					defered.resolve()
 				},1000)
-				return when.resolve()				
+				return defered.resolve()				
 			}
 		}
 	},
