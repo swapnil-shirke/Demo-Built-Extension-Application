@@ -84,9 +84,9 @@ module.exports = {
 	},
 	"/v1/application/users/current": {
 		GET : {
-			_post : function (req) {
+			_pre : function (req) {
 				req.logger.log(req.currentUser)
-                                return when.resolve()				
+        return when.resolve()				
 			}
 		}
 	},
