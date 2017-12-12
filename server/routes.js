@@ -45,8 +45,10 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				req.builtApp.User().login('abc@email.com', 'password')							
-				req.logger.warn("in get _post uid object current user", req.currentUser)				
+				req.builtApp.User().login('abc@email.com', 'password')
+				.then(function(succ){
+					req.logger.warn("in get _post uid object current user", req.currentUser)								
+				})							
 				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
