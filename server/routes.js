@@ -45,6 +45,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
+				req.currentUser()							
 				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
@@ -52,7 +53,7 @@ module.exports = {
 				})
 				// .save()
 				// .then(function(){
-				// })			
+				// })
 				return when.resolve()								
 			}
 		},
