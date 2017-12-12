@@ -45,7 +45,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				req.logger.log("in get _post uid current user", req.currentUser)				
+				req.logger.log("in get _post uid current user", req.built.getContextVar("currentUser"))				
 				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
@@ -83,7 +83,7 @@ module.exports = {
 			}
 		}
 	},
-	/**
+	/**	
 	 * v2 (Didn't work)
 	 */
 	"/v2/classes/person/objects": {
