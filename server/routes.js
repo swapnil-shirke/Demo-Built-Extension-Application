@@ -45,12 +45,15 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				req.builtApp.Class('person').Object({
+				return req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
 					 'address': [ "blt4f0760710e0b10c5" ]
-				}).save()
-				return when.resolve()				
+				})
+				.save()
+				.then(function(){
+					return when.resolve()
+				})								
 			}
 		},
 		PUT: {
