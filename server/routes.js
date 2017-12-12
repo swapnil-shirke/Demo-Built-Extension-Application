@@ -51,7 +51,7 @@ module.exports = {
 					 'age'    : 33,
 					 'address': [ "blt4f0760710e0b10c5" ]
 				})
-				// .save()
+				.save()
 				// .then(function(){
 				// })
 				return when.resolve()								
