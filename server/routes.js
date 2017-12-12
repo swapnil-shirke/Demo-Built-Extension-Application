@@ -46,7 +46,7 @@ module.exports = {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
 				
-				return when.reject()				
+				return when.resolve()				
 			}
 		},
 		PUT: {
