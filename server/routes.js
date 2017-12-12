@@ -57,7 +57,7 @@ module.exports = {
 					req.logger.error("object abc error", err)					
 				})
 
-				req.logger.log("req.bclass", req.bclass.toJSON())
+				req.logger.log("req.bclass", req.bclass)
 				
 				return when.resolve()								
 			}
