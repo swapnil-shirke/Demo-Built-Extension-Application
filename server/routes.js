@@ -49,7 +49,11 @@ module.exports = {
 					 'name'		:'abc',
 					 'age'    : 33,
 					 'address': [ "blt4f0760710e0b10c5" ]
-				});
+				}).then(function(succ){
+					req.logger.log("save succ", succ)			
+				}).catch(function(err){
+					req.logger.err("save err", err)								
+				})
 				return when.resolve()				
 			}
 		},
