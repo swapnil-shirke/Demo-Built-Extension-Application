@@ -1,5 +1,9 @@
 var when = require("when");
 var request = require("request");
+var Built = require('built-extension-sdk')
+
+// Initiate application
+var app = Built.App('blt6eef1c94c2ce0f4f')
 
 module.exports = {
   "/v1/functions/clive": {
