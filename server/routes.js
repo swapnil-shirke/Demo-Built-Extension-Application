@@ -45,10 +45,15 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				req.bobjekt({
+				req.bobjekt.save({
 					'name' : req.bobjekt.name,
 					'age' : 89,
 					'address' : [ "blt4f0760710e0b10c5" ]
+				}).then(function(succ){
+					req.logger.log("save succ", succ)					
+				})
+				.catch(function(err){
+					req.logger.error("save err", err)					
 				})
 				return when.resolve()				
 			}
