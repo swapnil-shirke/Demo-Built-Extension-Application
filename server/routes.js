@@ -23,7 +23,7 @@ module.exports = {
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})
-				req,logger.log("object hook POST call in s_pre call")
+				req.logger.log("object hook POST call in s_pre call")
 					
 				// .save()
 				// .then(function(data) {
