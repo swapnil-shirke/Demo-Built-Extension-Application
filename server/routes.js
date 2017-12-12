@@ -47,8 +47,9 @@ module.exports = {
 				req.logger.warn("in get _post uid object", req.bobjekt)
 				req.builtApp.User().login('abc@email.com', 'password')
 				.then(function(succ){
-					req.logger.log("in get _post uid object current user", req.currentUser, succ)								
-				})							
+					req.logger.log("in get _post uid object succ", succ.authtoken)											
+					req.logger.log("in get _post uid object current user", req.currentUser.set(succ.authtoken))																			
+				})
 				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
