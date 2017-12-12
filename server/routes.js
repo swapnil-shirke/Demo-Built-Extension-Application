@@ -45,7 +45,11 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				
+				req.bobjekt({
+					'name' : req.bobjekt.name,
+					'age' : 89,
+					'address' : [ "blt4f0760710e0b10c5" ]
+				})
 				return when.resolve()				
 			}
 		},
