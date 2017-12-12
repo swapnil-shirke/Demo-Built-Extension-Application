@@ -1,9 +1,5 @@
 var when = require("when");
 var request = require("request");
-var Built = require('built-extension-sdk')
-
-// Initiate application
-var app = Built.App('blt6eef1c94c2ce0f4f')
 
 module.exports = {
   "/v1/functions/clive": {
@@ -49,7 +45,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
-				app.Class('person').Object({
+				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
 					 'address': [ "blt4f0760710e0b10c5" ]
