@@ -45,6 +45,7 @@ module.exports = {
 		GET: {
 			_post: function(req, res) {
 				req.logger.warn("in get _post uid object", req.bobjekt)
+				req.logger.log("in get _post uid current user", req.currentUser)				
 				req.builtApp.Class('person').Object({
 					 'name'		:'abc',
 					 'age'    : 33,
@@ -79,14 +80,6 @@ module.exports = {
 					defered.resolve()
 				},1000)
 				return defered.resolve()				
-			}
-		}
-	},
-	"/v1/application/users/current": {
-		GET : {
-			_pre: function (req, res) {
-				req.logger.log(req.currentUser)
-        return when.resolve()				
 			}
 		}
 	},
