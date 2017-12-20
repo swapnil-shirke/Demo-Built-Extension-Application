@@ -12,7 +12,8 @@ module.exports = {
 	"/v1/classes/person/objects" : {
 		GET: {
 			_post: function(req, res) {
-				req.logger.log("in post objects we are", req.bobjekt)
+				req.logger.log("in post objects", req.bobjekt)
+				req.logger.error("in post objects we are")				
 				// req.bobjekt.unknown()								
 				return when.resolve()				
 			}
