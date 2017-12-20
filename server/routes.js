@@ -12,7 +12,7 @@ module.exports = {
 	"/v1/classes/person/objects" : {
 		GET: {
 			_post: function(req, res) {
-				req.logger.log("in post objects", req.bobjekt)
+				req.logger.log("in post objects we are", req.bobjekt)
 				// req.bobjekt.unknown()								
 				return when.resolve()				
 			}
@@ -112,7 +112,7 @@ module.exports = {
 			}
 		}
 	},
-	/**
+	/**	
 	 * v3 (Didn't work)
 	 */
 	"/v3/classes/person/objects": {
