@@ -42,7 +42,6 @@ module.exports = {
 			}
 		}
 	},
-	/*
 	"/v1/classes/person/objects/:objectUid": {
 		GET: {
 			_post: function(req, res) {
@@ -90,7 +89,6 @@ module.exports = {
 			}
 		}
 	},
-	*/
 	/**	
 	 * v2 (Didn't work)
 	 */
