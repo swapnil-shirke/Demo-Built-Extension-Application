@@ -1,4 +1,4 @@
-var when = require("when");
+//var when = require("when");
 var request = require("request");
 
 module.exports = {
