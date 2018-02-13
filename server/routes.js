@@ -138,7 +138,7 @@ module.exports = {
 		}
 	},
 	/**
-	 * v4 (Didn't work)
+	 * v4 (Didn't work )
 	 */
 	"/v4/classes/person/objects": {
 		GET: {
