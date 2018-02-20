@@ -15,7 +15,8 @@
   "author": "clive-machado",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "when": "*"
   },
   "bugs": {
     "url": "https://github.com/clive-machado/Demo-Built-Extension-Application/issues"
