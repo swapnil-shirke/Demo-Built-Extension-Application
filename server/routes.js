@@ -5,8 +5,8 @@ module.exports = {
   "/v1/functions/clive": {
 		GET: function(req, res) {
 			req.logger.log("this simple function")
-			this.resSuccess(req, res, {
-				clive: "is awesome"
+			return this.resSuccess(req, res, {
+				clive: "is awesome 1"
 			})
 		}
 	},
