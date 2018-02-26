@@ -1,10 +1,10 @@
 var Built = require('built-extension-sdk')
 
 // Initiate application
-var app = Built.App('blt8b104e2a85d96a9d')
+var app = Built.App('bltc8b6b9e952929343')
 .setHost("stag-api.built.io")
 .setProtocol("https")
-.setMasterKey('blt4eacfe5b25245d5e')
+.setMasterKey('blt13a73f2b5ae3a00e')
 
 var extensionSDK = app.Extension({
 	secret_key     : 'swapnil',
