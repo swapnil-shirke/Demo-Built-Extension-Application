@@ -4,9 +4,9 @@
   "description": "This application is a created to present the Built.io Backend Extension 2.0",
   "main": "index.js",
   "scripts": {
-    "preinstall" : "npm install ./custom-packages/built-extension-sdk-1.0.0.tgz",
+    "preinstall": "npm install ./custom-packages/built-extension-sdk-1.0.0.tgz",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,10 @@
   },
   "author": "clive-machado",
   "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0",
+    "when": "*"
+  },
   "bugs": {
     "url": "https://github.com/clive-machado/Demo-Built-Extension-Application/issues"
   },
