@@ -8,7 +8,7 @@ var app = Built.App('bltc8b6b9e952929343')
 
 var extensionSDK = app.Extension({
 	secret_key     : 'swapnil23',
-	extension_key	 : '23',
+	extension_key	 : 'blt_ext_default',
 	static         : __dirname + '/client', 
 	routes         : require('./server/routes')
 }) 
